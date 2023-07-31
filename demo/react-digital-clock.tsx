@@ -12,7 +12,7 @@ export default class ReactDigitalClock extends React.Component {
   render(): React.JSX.Element {
     return (
       <div>
-        <DigitalClock isEastTime={true} width="220px" height="70px" ref={this.clockRef}></DigitalClock>
+        <DigitalClock width="220px" height="70px" ref={this.clockRef}></DigitalClock>
       </div>
     );
   }

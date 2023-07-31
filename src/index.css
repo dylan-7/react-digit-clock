@@ -1,0 +1,155 @@
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.digital-clock-wrap {
+    width: 250px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.digital-clock-container {
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+    justify-content: flex-start;
+    /*padding: 5px 0 0;*/
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.digital-clock-main {
+    height: 100%;
+    width: 100%;
+}
+
+.digital-clock-number,
+.digital-clock-two {
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.digital-clock-number {
+    align-items: flex-end;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+.digital-clock-digit {
+    border: 4px solid transparent;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.digital-clock-two:first-child {
+    margin-right: 0.3rem;
+}
+
+/*.digital-clock-two:first-child::after {*/
+/*    content: ":";*/
+/*    font-size: 2.5rem;*/
+/*    margin: auto;*/
+/*    position: absolute;*/
+/*    right: -10px;*/
+/*    top: 41%;*/
+/*    transform: translateY(-50%);*/
+/*}*/
+
+.digital-clock-two:last-child {
+    width: 75%;
+    height: 75%;
+}
+
+.digital-separate {
+    position: relative;
+    display: flex;
+    width: 10%;
+    height: 100%;
+}
+
+.digital-separate .dot {
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 2px;
+    background: #000;
+}
+
+.digital-separate .dot:first-child {
+    top: 30%
+}
+
+.digital-separate .dot:last-child {
+    top: 64%
+}
+
+.digital-clock-shape {
+    background-color: #000;
+    position: absolute;
+}
+
+.digital-clock-shape.passive {
+    opacity: .08;
+}
+
+.digital-clock1-shape {
+    width: 100%;
+    height: 11%;
+    clip-path: polygon(3% 0, 97% 0, 75% 100%, 25% 100%);
+}
+
+.digital-clock2-shape, .digital-clock3-shape {
+    height: 50%;
+    position: absolute;
+    top: 0;
+}
+
+.digital-clock2-shape {
+    clip-path: polygon(0 0,0 100%,40% 70%,40% 30%);
+    width: 65%;
+}
+
+.digital-clock3-shape {
+    clip-path: polygon(0 30%,100% 0,100% 100%,0 70%);
+    right: 0;
+    width: 25%;
+}
+
+.digital-clock4-shape {
+    clip-path: polygon(25% 10%,75% 10%,95% 40%,75% 70%,25% 70%,5% 40%);
+    height: 20%;
+    top: 42%;
+    width: 100%;
+}
+
+.digital-clock5-shape, .digital-clock6-shape {
+    bottom: 0;
+    height: 50%;
+    position: absolute;
+}
+
+.digital-clock5-shape {
+    clip-path: polygon(0 0,0 100%,40% 70%,40% 30%);
+    width: 65%;
+}
+
+.digital-clock6-shape {
+    clip-path: polygon(0 30%,100% 0,100% 100%,0 70%);
+    right: 0;
+    width: 25%;
+}
+
+.digital-clock7-shape {
+    bottom: 0;
+    clip-path: polygon(25% 0,75% 0,97% 100%,3% 100%);
+    height: 11%;
+    width: 100%;
+}

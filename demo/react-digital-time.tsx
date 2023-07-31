@@ -1,7 +1,7 @@
 import * as React from 'react'
-import DigitalClock from '../src/react-digital-clock'
+import DigitalClock from '../src/react-digital-time'
 
-export default class ReactDigitalClock extends React.Component {
+export default class ReactDigitalTime extends React.Component {
 
   private clockRef = React.createRef<any>()
 

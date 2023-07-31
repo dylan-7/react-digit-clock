@@ -1,18 +1,18 @@
-# react-digital-clock
+# react-digital-time
 
 
-> react-digital-clock is a simple react component used to show digital clock.
+> react-digital-time is a simple react component used to show digital time.
 
 ## Install
 
-> **yarn add react-digital-clock**
+> **yarn add react-digital-time**
 
 
 ## Usage
 
 ```jsx
 import * as React from 'react';
-import DigitalClock from 'react-digital-clock';
+import DigitalClock from 'react-digital-time';
 
 <DigitalClock />
 ```
@@ -20,7 +20,7 @@ import DigitalClock from 'react-digital-clock';
 
 ## Component props
 
-- **`react-digital-clock`** (optional, string)
+- **`react-digital-time`** (optional, string)
 
 width: style width.
 

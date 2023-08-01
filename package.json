@@ -1,6 +1,6 @@
 {
   "name": "react-digital-time",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "react-digital-time is a simple react component used to show digital time.",
   "main": "lib/react-digital-time.js",
   "module": "esm/react-digital-time.js",
@@ -14,9 +14,9 @@
     "lint-staged": "lint-staged",
     "test": "jest",
     "build": "yarn run build:cjs && yarn run build:esm",
-    "build:cjs": "rimraf ./lib && tsc --module commonjs --outDir lib",
-    "build:esm": "rimraf ./esm && tsc --module ESNext --outDir esm",
-    "build:demo": "webpack --env.prod --config ./demo/webpack.config.js",
+    "build:cjs": "rimraf ./lib && tsc --module commonjs --outDir lib && cpy 'src/*.css' './lib'",
+    "build:esm": "rimraf ./esm && tsc --module ESNext --outDir esm && cpy 'src/*.css' './esm'",
+    "build:demo": "webpack --env pro --config ./demo/webpack.config.js",
     "start:demo": "webpack --config ./demo/webpack.config.js",
     "prepublishOnly": "yarn run build"
   },
@@ -46,6 +46,7 @@
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
+    "cpy-cli": "^5.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "eslint": "^8.46.0",

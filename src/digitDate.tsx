@@ -35,18 +35,16 @@ export default function Digit({ time, dotStyle }: { time: string, dotStyle: obje
     return (
         <div className="digital-clock-number">
             <div className="digital-clock-two">
-                {hh.split('').map((v, i) => digitNumber(v, i))}
+                {year.split('').map((v, i) => digitNumber(v, i))}
             </div>
-            <span className="digital-separate">
-                <span className="dot" style={dotStyle}></span>
-                <span className="dot" style={dotStyle}></span>
-            </span>
+            <span className="digital-separate">-</span>
             <div className="digital-clock-two">
-                {mm.split('').map((v, i) => digitNumber(v, i))}
+                {month.split('').map((v, i) => digitNumber(v, i))}
             </div>
             <div className="digital-clock-two">
-                {ss.split('').map((v, i) => digitNumber(v, i))}
+                {date.split('').map((v, i) => digitNumber(v, i))}
             </div>
+            <div className="digital-clock-two"></div>
         </div>
     )
 }

@@ -1,12 +1,13 @@
 /* eslint-disable */
-var path = require('path');
+var path = require('path')
 
 module.exports = function (env = {}) {
   return {
-    mode: env.prod ? 'production' : 'development',
-    devtool: env.prod ? '' : 'cheap-module-eval-source-map',
-    watch: !env.prod,
+    mode: env.pro ? 'production' : 'development',
+    devtool: env.pro ? 'source-map' : 'cheap-module-source-map',
+    watch: !env.pro,
     entry: './demo/demo.tsx',
+    cache: false,
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'bundle.js',
@@ -30,11 +31,11 @@ module.exports = function (env = {}) {
         },
         {
           test: /\.css$/,
-          loader: 'style-loader!css-loader',
+          use: ['style-loader', 'css-loader']
         },
         {
           test: /\.(png|jpg)$/,
-          loader: 'url-loader?limit=512',
+          use: 'url-loader?limit=512',
         },
       ],
     },

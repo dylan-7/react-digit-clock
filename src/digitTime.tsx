@@ -5,7 +5,7 @@ export default function DigitTime({ time, dotStyle }: { time: string, dotStyle: 
     // 一个数字总共7条边线
     const trapezoid: number[] = [1, 2, 3, 4, 5, 6, 7]
     // 边线的样式编号，对应的编号组成数字
-    const numberLine = {
+    const numberLine: {[prop: string]: number[]} = {
         '0': [1, 2, 3, 5, 6, 7],
         '1': [3, 6],
         '2': [1, 3, 4, 5, 7],
@@ -33,7 +33,7 @@ export default function DigitTime({ time, dotStyle }: { time: string, dotStyle: 
         )
     }
     return (
-        <div className="digital-clock-number">
+        <div className="digital-clock-number digital-clock-time">
             <div className="digital-clock-two">
                 {hh.split('').map((v, i) => digitNumber(v, i))}
             </div>

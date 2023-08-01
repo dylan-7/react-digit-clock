@@ -1,6 +1,6 @@
 {
   "name": "react-digital-time",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "react-digital-time is a simple react component used to show digital time.",
   "main": "lib/react-digital-time.js",
   "module": "esm/react-digital-time.js",

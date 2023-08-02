@@ -15,6 +15,19 @@ interface DigitalClockState {
   time: string
 }
 
+export interface DigitalTimeType {
+  getOriginal: () => Date
+  getFullTime: () => string
+  getFullYear: () => number
+  getMonth: () => number
+  getDate: () => number
+  getHours: () => number
+  getMinutes: () => number
+  getSecond: () => number
+  getTimestamp: () => number
+  getUnix: () => number
+}
+
 export default class DigitalClock extends React.PureComponent<DigitalClockProps, DigitalClockState> {
   static defaultProps = {
     className: '',
@@ -22,6 +35,11 @@ export default class DigitalClock extends React.PureComponent<DigitalClockProps,
     width: '100px',
     height: '30px'
   }
+  state = {
+    date: '0000-00-00',
+    time: '00:00:00'
+  }
+
   private barStyle: {[prop: string]: string} = { width: '2px', borderTopWidth: '1px' }
   private dotStyle = { width: '2px', height: '2px' }
   private date = this.props.isEastTime ? new Date(new Date().getTime() - 60 * 60 * 60 * 12 * 1000) : new Date()
@@ -45,7 +63,7 @@ export default class DigitalClock extends React.PureComponent<DigitalClockProps,
   public getTimestamp: () => number = () => this.date.valueOf() // milliseconds
   public getUnix: () => number = () => this.date.valueOf() / 1e3
 
-  constructor(props) {
+  constructor(props: DigitalClockProps) {
     super(props)
     this.state = {
       date: '0000-00-00',
